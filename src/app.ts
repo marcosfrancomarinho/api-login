@@ -29,7 +29,7 @@ app.use(express.json());
  */
 app.use(cors({
     exposedHeaders: ['authorization-token'],
-    origin: ['http://localhost:5500'], // Define a origem permitida para acessar o servidor
+    origin: '*', // Define a origem permitida para acessar o servidor
     methods: ['POST'] // Permite apenas o método POST nas solicitações CORS
 }));
 
