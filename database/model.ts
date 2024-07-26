@@ -10,7 +10,7 @@ const messageError: iMessageErrorOptionsModel = {
      * @returns Mensagem personalizada indicando que o campo não pode ser vazio.
      */
     empty: (value) => `${value} não pode ser vazio(a).`,
-    
+
     /**
      * Mensagem de erro para campos nulos.
      * @param value - Nome do campo que está nulo.
