@@ -30,16 +30,9 @@ app.use(express.json());
 app.use(cors({
     exposedHeaders: ['authorization-token'],
     origin: '*', // Define a origem permitida para acessar o servidor
-    methods: ['POST'] // Permite apenas o método POST nas solicitações CORS
+    methods: ['POST'] ,// Permite apenas o método POST nas solicitações CORS
+    allowedHeaders: ['Content-Type', 'Authorization'] // Cabeçalhos permitidos
 }));
-
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization-Token');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    next();
-});
-
 /**
  * Configura o middleware para usar as rotas importadas.
  * O roteador gerencia as rotas do aplicativo.
